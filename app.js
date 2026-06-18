@@ -48,3 +48,36 @@ document.getElementById('bookingForm').addEventListener('submit', function(event
             submitBtn.disabled = false;
         });
 });
+
+// كود تفعيل وإغلاق القائمة الجانبية (Burger Menu) للهواتف
+const menuToggle = document.getElementById('menu-toggle');
+const navLinks = document.getElementById('nav-links');
+const menuIcon = document.getElementById('menu-icon');
+
+if (menuToggle && navLinks) {
+    menuToggle.addEventListener('click', () => {
+        // تبديل كلاسات العرض الخاصة بـ Tailwind
+        navLinks.classList.toggle('hidden');
+
+        // تغيير الأيقونة بين شكل البورجر (bars) وعلامة الإغلاق (times)
+        if (menuIcon.classList.contains('fa-bars')) {
+            menuIcon.classList.remove('fa-bars');
+            menuIcon.classList.add('fa-xmark');
+        } else {
+            menuIcon.classList.remove('fa-xmark');
+            menuIcon.classList.add('fa-bars');
+        }
+    });
+
+    // إغلاق القائمة تلقائياً عند الضغط على أي رابط للتنقل داخل الصفحة
+    const links = navLinks.querySelectorAll('a');
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth < 768) { // للشاشات الصغيرة فقط md
+                navLinks.classList.add('hidden');
+                menuIcon.classList.remove('fa-xmark');
+                menuIcon.classList.add('fa-bars');
+            }
+        });
+    });
+}
