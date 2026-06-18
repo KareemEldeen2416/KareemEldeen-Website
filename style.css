@@ -1,3 +1,8 @@
+:root{
+    --primary-color:#064734 ;
+    --secondary-color:#e0ffc2 ;
+    --third-color: #167757;
+}
 .slide { display: none; }
 .slide.active { display: block; animation: fadeEffect 0.6s ease-in-out; }
 @keyframes fadeEffect {
@@ -18,4 +23,21 @@
     height: 200%;
     background: radial-gradient(circle, rgba(224,255,194,0.05) 0%, transparent 70%);
     transform: rotate(30deg);
+}
+
+.navbar{
+    background-image:linear-gradient(45deg,var(--primary-color) , var(--third-color));
+}
+
+.skill{
+    cursor:pointer;
+}
+
+.social-media-icon{
+    color:var(--secondary-color);
+}
+
+.social-media-icon:hover{
+    color:var(--primary-color);
+    background-color:var(--secondary-color);
 }
