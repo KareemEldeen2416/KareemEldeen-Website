@@ -3,10 +3,7 @@
   "version": "1.0.0",
   "description": "Portfolio website for KareemEldeen Ahmed",
   "scripts": {
-    "build:css": "tailwindcss -i ./src/style.css -o ./style.css --minify",
-    "watch:css": "tailwindcss -i ./src/style.css -o ./style.css --watch"
-  },
-  "devDependencies": {
-    "tailwindcss": "^3.4.17"
+    "build:css": "npx --yes tailwindcss@3 -i ./src/style.css -o ./style.css --minify",
+    "watch:css": "npx --yes tailwindcss@3 -i ./src/style.css -o ./style.css --watch"
   }
 }

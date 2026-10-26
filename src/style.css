@@ -116,14 +116,17 @@ body {
 
 .workflow-arrow-left {
   animation: workflowFlowLeft 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  will-change: transform, opacity;
 }
 
 .workflow-arrow-right {
   animation: workflowFlowRight 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  will-change: transform, opacity;
 }
 
 .workflow-arrow-down {
   animation: workflowFlowDown 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  will-change: transform, opacity;
 }
 
 .workflow-step-1 { animation-delay: 0s; }
@@ -142,3 +145,10 @@ body {
     opacity: 0.85;
   }
 }
+
+/* Performance optimization: Skip rendering & layout for offscreen sections */
+.content-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 700px;
+}
+

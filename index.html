@@ -134,7 +134,7 @@
         </div>
     </section>
 
-    <section id="skills" class="py-28 bg-white px-4 relative">
+    <section id="skills" class="content-auto py-28 bg-white px-4 relative">
         <div class="max-w-5xl mx-auto">
             <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-3xl md:text-5xl font-black text-primary mb-4">المهارات والخبرات التقنية</h2>
@@ -304,7 +304,7 @@
         </div>
     </section>
 
-    <section id="services" class="py-28 bg-gradient-to-b from-[#f2f7f4]/80 via-[#f9fbf9] to-[#f2f7f4]/80 px-4 relative border-t border-gray-100">
+    <section id="services" class="content-auto py-28 bg-gradient-to-b from-[#f2f7f4]/80 via-[#f9fbf9] to-[#f2f7f4]/80 px-4 relative border-t border-gray-100">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-16" data-aos="fade-up">
                 <span class="bg-primary/10 text-primary border border-primary/20 px-4 py-1.5 rounded-full text-sm font-bold tracking-wide inline-block mb-3">ماذا أقدم لعملائي</span>
@@ -478,7 +478,7 @@
     </section>
 
     <!-- قسم الشعار والرؤية (Motto Section) -->
-    <section id="motto" class="py-24 bg-gradient-to-br from-[#021b14] via-[#064734] to-[#021b14] text-white px-4 relative overflow-hidden border-t-2 border-b-2 border-secondary/30">
+    <section id="motto" class="content-auto py-24 bg-gradient-to-br from-[#021b14] via-[#064734] to-[#021b14] text-white px-4 relative overflow-hidden border-t-2 border-b-2 border-secondary/30">
         <div class="absolute inset-0 pointer-events-none">
             <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-secondary/10 blur-[100px] rounded-full"></div>
             <div class="absolute top-0 right-10 w-48 h-48 bg-primary/20 blur-2xl rounded-full"></div>
@@ -509,7 +509,7 @@
     </section>
 
     <!-- قسم خطوات العمل (Workflow Steps Map Section) -->
-    <section id="workflow" class="py-28 bg-[#fbfdfc] px-4 relative overflow-hidden border-t border-gray-100">
+    <section id="workflow" class="content-auto py-28 bg-[#fbfdfc] px-4 relative overflow-hidden border-t border-gray-100">
         <!-- خلفية شبكة الخريطة (Map Grid Pattern) -->
         <div class="absolute inset-0 pointer-events-none opacity-40"
             style="background-image: radial-gradient(#064734 1.2px, transparent 1.2px); background-size: 28px 28px;"></div>
@@ -855,7 +855,7 @@
         </div>
     </section>
 
-    <section id="projects" class="py-28 bg-gray-50 px-4">
+    <section id="projects" class="content-auto py-28 bg-gray-50 px-4">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-16" data-aos="fade-up">
                 <h2 class="text-3xl md:text-5xl font-black text-primary mb-4">أحدث المشاريع المعروضة</h2>
@@ -1127,7 +1127,7 @@
         </div>
     </section>
 
-    <section id="booking" class="py-28 bg-white px-4">
+    <section id="booking" class="content-auto py-28 bg-white px-4">
         <div class="max-w-2xl mx-auto bg-gradient-to-br from-gray-50 to-white border border-gray-100 p-8 md:p-10 rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.05)] relative overflow-hidden"
             data-aos="zoom-in-up" data-aos-duration="1000">
             <div class="absolute top-0 right-0 w-32 h-32 bg-secondary/20 rounded-bl-full pointer-events-none"></div>
@@ -1198,7 +1198,7 @@
     </section>
 
     <section id="contact"
-        class="py-24 bg-[#021b14] text-white px-4 border-t-2 border-secondary relative overflow-hidden">
+        class="content-auto py-24 bg-[#021b14] text-white px-4 border-t-2 border-secondary relative overflow-hidden">
         <div class="max-w-5xl mx-auto text-center space-y-14">
             <div data-aos="fade-up">
                 <h2 class="text-4xl font-black text-secondary mb-3 tracking-wide">قنوات التواصل المباشر</h2>
@@ -1245,16 +1245,8 @@
         </div>
     </section>
 
-    <!-- Defer third-party non-critical scripts to eliminate render-blocking -->
+    <!-- Defer non-critical UI scripts to eliminate render-blocking -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            if (window.emailjs) {
-                emailjs.init("eB2PubUq4ETdX8b1T");
-            }
-        });
-    </script>
     <script src="app.js" defer></script>
 </body>
 
