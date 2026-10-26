@@ -6,23 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>كريم الدين</title>
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Preconnect & DNS-Prefetch for External Critical Origins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://unpkg.com">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+
+    <!-- Preload LCP Candidate Hero Image with High Fetch Priority -->
+    <link rel="preload" href="images/portfolioImage.webp" as="image" type="image/webp" fetchpriority="high">
+
+    <!-- Non-blocking Google Fonts with display=swap -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap">
+    </noscript>
+
+    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="images/KareemEldeen Logo1.png">
+
+    <!-- Tailwind Play CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Non-blocking Font Awesome with font-display swap override in style.css -->
+    <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </noscript>
 
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function () {
-            // تفعيل المكتبة باستخدام الـ Public Key الخاص بك
-            emailjs.init("eB2PubUq4ETdX8b1T");
-        })();
-    </script>
+    <!-- Non-blocking AOS CSS -->
+    <link rel="preload" as="style" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    </noscript>
 
     <script>
         tailwind.config = {
@@ -91,8 +112,15 @@
                     class="absolute inset-0 bg-secondary rounded-full blur-2xl opacity-20 group-hover:opacity-40 transition-opacity">
                 </div>
                 <div
-                    class="w-56 h-56 md:w-72 md:h-72 rounded-full overflow-hidden  border-secondary shadow-2xl relative z-10 transform group-hover:scale-105 transition-transform duration-500">
-                    <img src="images/portfolioImage.png" alt="مهندس برمجيات" class="w-full h-full object-cover">
+                    class="w-56 h-56 md:w-72 md:h-72 rounded-full overflow-hidden border-secondary shadow-2xl relative z-10 transform group-hover:scale-105 transition-transform duration-500">
+                    <picture>
+                        <source srcset="images/portfolioImage.webp" type="image/webp">
+                        <img src="images/portfolioImage.png" alt="كريم الدين - مهندس برمجيات" 
+                             class="w-full h-full object-cover" 
+                             width="288" height="288" 
+                             fetchpriority="high" 
+                             decoding="async">
+                    </picture>
                 </div>
             </div>
 
@@ -860,11 +888,11 @@
                 <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl hover:border-secondary transition-all duration-300 flex flex-col lg:flex-row group"
                     data-aos="fade-up" data-aos-duration="1000">
                     <div class="relative w-full lg:w-1/2 h-72 sm:h-96 lg:h-auto min-h-[300px] lg:min-h-[420px] overflow-hidden bg-gray-100 flex-shrink-0" id="project1-slideshow">
-                        <img src="images/website.PNG" class="slide active w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="المشروع الأول 1">
-                        <img src="images/payment.PNG" class="slide w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="المشروع الأول 2">
-                        <img src="images/main cashier.PNG" class="slide w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="المشروع الأول 3">
-                        <img src="images/restaurant design.PNG" class="slide w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="المشروع الأول 4">
-                        <img src="images/products.PNG" class="slide w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="المشروع الأول 5">
+                        <img src="images/website.webp" class="slide active w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="المشروع الأول 1" width="600" height="400" loading="lazy" decoding="async">
+                        <img src="images/payment.webp" class="slide w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="المشروع الأول 2" width="600" height="400" loading="lazy" decoding="async" fetchpriority="low">
+                        <img src="images/main cashier.webp" class="slide w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="المشروع الأول 3" width="600" height="400" loading="lazy" decoding="async" fetchpriority="low">
+                        <img src="images/restaurant design.webp" class="slide w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="المشروع الأول 4" width="600" height="400" loading="lazy" decoding="async" fetchpriority="low">
+                        <img src="images/products.webp" class="slide w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="المشروع الأول 5" width="600" height="400" loading="lazy" decoding="async" fetchpriority="low">
 
                         <button onclick="changeSlide('project1-slideshow', -1)"
                             class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/60 text-white w-10 h-10 rounded-full hover:bg-primary transition flex items-center justify-center opacity-90 lg:opacity-0 lg:group-hover:opacity-100 z-10" aria-label="السابق">
@@ -909,11 +937,11 @@
                 <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl hover:border-secondary transition-all duration-300 flex flex-col lg:flex-row group"
                     data-aos="fade-up" data-aos-duration="1000">
                     <div class="relative w-full lg:w-1/2 h-72 sm:h-96 lg:h-auto min-h-[300px] lg:min-h-[420px] overflow-hidden bg-gray-100 flex-shrink-0" id="project2-slideshow">
-                        <img src="images/ecommerc1.PNG" class="slide active w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="المشروع الثاني 1">
-                        <img src="images/ecommerc2.PNG" class="slide w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="المشروع الثاني 2">
-                        <img src="images/ecommerc3.PNG" class="slide w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="المشروع الثاني 3">
-                        <img src="images/ecommerc4.PNG" class="slide w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="المشروع الثاني 4">
-                        <img src="images/ecommerc5.PNG" class="slide w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="المشروع الثاني 5">
+                        <img src="images/ecommerc1.webp" class="slide active w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="المشروع الثاني 1" width="600" height="400" loading="lazy" decoding="async">
+                        <img src="images/ecommerc2.webp" class="slide w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="المشروع الثاني 2" width="600" height="400" loading="lazy" decoding="async" fetchpriority="low">
+                        <img src="images/ecommerc3.webp" class="slide w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="المشروع الثاني 3" width="600" height="400" loading="lazy" decoding="async" fetchpriority="low">
+                        <img src="images/ecommerc4.webp" class="slide w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="المشروع الثاني 4" width="600" height="400" loading="lazy" decoding="async" fetchpriority="low">
+                        <img src="images/ecommerc5.webp" class="slide w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="المشروع الثاني 5" width="600" height="400" loading="lazy" decoding="async" fetchpriority="low">
 
                         <button onclick="changeSlide('project2-slideshow', -1)"
                             class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/60 text-white w-10 h-10 rounded-full hover:bg-primary transition flex items-center justify-center opacity-90 lg:opacity-0 lg:group-hover:opacity-100 z-10" aria-label="السابق">
@@ -955,8 +983,8 @@
                 <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl hover:border-secondary transition-all duration-300 flex flex-col lg:flex-row group"
                     data-aos="fade-up" data-aos-duration="1000">
                     <div class="relative w-full lg:w-1/2 h-72 sm:h-96 lg:h-auto min-h-[300px] lg:min-h-[420px] overflow-hidden bg-gray-100 flex-shrink-0" id="project3-slideshow">
-                        <img src="images/eng1.PNG" class="slide active w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="المشروع الثالث 1">
-                        <img src="images/eng2.PNG" class="slide w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="المشروع الثالث 2">
+                        <img src="images/eng1.webp" class="slide active w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="المشروع الثالث 1" width="600" height="400" loading="lazy" decoding="async">
+                        <img src="images/eng2.webp" class="slide w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="المشروع الثالث 2" width="600" height="400" loading="lazy" decoding="async" fetchpriority="low">
 
                         <button onclick="changeSlide('project3-slideshow', -1)"
                             class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/60 text-white w-10 h-10 rounded-full hover:bg-primary transition flex items-center justify-center opacity-90 lg:opacity-0 lg:group-hover:opacity-100 z-10" aria-label="السابق">
@@ -995,9 +1023,9 @@
                 <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl hover:border-secondary transition-all duration-300 flex flex-col lg:flex-row group"
                     data-aos="fade-up" data-aos-duration="1000">
                     <div class="relative w-full lg:w-1/2 h-72 sm:h-96 lg:h-auto min-h-[300px] lg:min-h-[420px] overflow-hidden bg-gray-100 flex-shrink-0" id="project4-slideshow">
-                        <img src="images/media1.PNG" class="slide active w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="المشروع الرابع 1">
-                        <img src="images/media2.PNG" class="slide w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="المشروع الرابع 2">
-                        <img src="images/media3.PNG" class="slide w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="المشروع الرابع 3">
+                        <img src="images/media1.webp" class="slide active w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="المشروع الرابع 1" width="600" height="400" loading="lazy" decoding="async">
+                        <img src="images/media2.webp" class="slide w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="المشروع الرابع 2" width="600" height="400" loading="lazy" decoding="async" fetchpriority="low">
+                        <img src="images/media3.webp" class="slide w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="المشروع الرابع 3" width="600" height="400" loading="lazy" decoding="async" fetchpriority="low">
 
                         <button onclick="changeSlide('project4-slideshow', -1)"
                             class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/60 text-white w-10 h-10 rounded-full hover:bg-primary transition flex items-center justify-center opacity-90 lg:opacity-0 lg:group-hover:opacity-100 z-10" aria-label="السابق">
@@ -1036,11 +1064,11 @@
                 <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl hover:border-secondary transition-all duration-300 flex flex-col lg:flex-row group"
                     data-aos="fade-up" data-aos-duration="1000">
                     <div class="relative w-full lg:w-1/2 h-72 sm:h-96 lg:h-auto min-h-[300px] lg:min-h-[420px] overflow-hidden bg-gray-100 flex-shrink-0" id="project5-slideshow">
-                        <img src="images/clinic1.PNG" class="slide active w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="المشروع الخامس 1">
-                        <img src="images/clinic2.PNG" class="slide w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="المشروع الخامس 2">
-                        <img src="images/clinic3.PNG" class="slide w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="المشروع الخامس 3">
-                        <img src="images/clinic4.PNG" class="slide w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="المشروع الخامس 4">
-                        <img src="images/clinic5.PNG" class="slide w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="المشروع الخامس 5">
+                        <img src="images/clinic1.webp" class="slide active w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="المشروع الخامس 1" width="600" height="400" loading="lazy" decoding="async">
+                        <img src="images/clinic2.webp" class="slide w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="المشروع الخامس 2" width="600" height="400" loading="lazy" decoding="async" fetchpriority="low">
+                        <img src="images/clinic3.webp" class="slide w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="المشروع الخامس 3" width="600" height="400" loading="lazy" decoding="async" fetchpriority="low">
+                        <img src="images/clinic4.webp" class="slide w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="المشروع الخامس 4" width="600" height="400" loading="lazy" decoding="async" fetchpriority="low">
+                        <img src="images/clinic5.webp" class="slide w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="المشروع الخامس 5" width="600" height="400" loading="lazy" decoding="async" fetchpriority="low">
 
                         <button onclick="changeSlide('project5-slideshow', -1)"
                             class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/60 text-white w-10 h-10 rounded-full hover:bg-primary transition flex items-center justify-center opacity-90 lg:opacity-0 lg:group-hover:opacity-100 z-10" aria-label="السابق">
@@ -1079,10 +1107,10 @@
                 <div class="bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl hover:border-secondary transition-all duration-300 flex flex-col lg:flex-row group"
                     data-aos="fade-up" data-aos-duration="1000">
                     <div class="relative w-full lg:w-1/2 h-72 sm:h-96 lg:h-auto min-h-[300px] lg:min-h-[420px] overflow-hidden bg-gray-100 flex-shrink-0" id="project6-slideshow">
-                        <img src="images/toc1.PNG" class="slide active w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="مشروع المكتب الفني 1">
-                        <img src="images/toc2.PNG" class="slide w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="مشروع المكتب الفني 2">
-                        <img src="images/toc3.PNG" class="slide w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="مشروع المكتب الفني 3">
-                        <img src="images/toc4.PNG" class="slide w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="مشروع المكتب الفني 4">
+                        <img src="images/toc1.webp" class="slide active w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="مشروع المكتب الفني 1" width="600" height="400" loading="lazy" decoding="async">
+                        <img src="images/toc2.webp" class="slide w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="مشروع المكتب الفني 2" width="600" height="400" loading="lazy" decoding="async" fetchpriority="low">
+                        <img src="images/toc3.webp" class="slide w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="مشروع المكتب الفني 3" width="600" height="400" loading="lazy" decoding="async" fetchpriority="low">
+                        <img src="images/toc4.webp" class="slide w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="مشروع المكتب الفني 4" width="600" height="400" loading="lazy" decoding="async" fetchpriority="low">
 
                         <button onclick="changeSlide('project6-slideshow', -1)"
                             class="absolute left-3 top-1/2 -translate-y-1/2 bg-black/60 text-white w-10 h-10 rounded-full hover:bg-primary transition flex items-center justify-center opacity-90 lg:opacity-0 lg:group-hover:opacity-100 z-10" aria-label="السابق">
@@ -1238,8 +1266,17 @@
         </div>
     </section>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="app.js"></script>
+    <!-- Defer third-party non-critical scripts to eliminate render-blocking -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            if (window.emailjs) {
+                emailjs.init("eB2PubUq4ETdX8b1T");
+            }
+        });
+    </script>
+    <script src="app.js" defer></script>
 </body>
 
 </html>
