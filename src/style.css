@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom site styles */
+body {
+  font-family: 'Cairo', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+:root {
+  --primary-color: #064734;
+  --secondary-color: #e0ffc2;
+  --third-color: #167757;
+}
+
+.slide { display: none; }
+.slide.active { display: block; animation: fadeEffect 0.6s ease-in-out; }
+
+@keyframes fadeEffect {
+  from { opacity: 0; transform: scale(1.03); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.hero-bg {
+  background: linear-gradient(135deg, #064734 0%, #03251b 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(224,255,194,0.05) 0%, transparent 70%);
+  transform: rotate(30deg);
+}
+
+.navbar {
+  background-image: linear-gradient(45deg, var(--primary-color), var(--third-color));
+}
+
+.skill {
+  cursor: pointer;
+}
+
+.social-media-icon {
+  color: var(--secondary-color);
+}
+
+.social-media-icon:hover {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+}
+
+/* Workflow Map Moving Arrows */
+@keyframes workflowFlowLeft {
+  0% {
+    transform: translate(calc(-50% + 28px), -50%) scale(0.75);
+    opacity: 0;
+  }
+  20% {
+    transform: translate(calc(-50% + 14px), -50%) scale(1);
+    opacity: 1;
+  }
+  80% {
+    transform: translate(calc(-50% - 14px), -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(calc(-50% - 28px), -50%) scale(0.75);
+    opacity: 0;
+  }
+}
+
+@keyframes workflowFlowRight {
+  0% {
+    transform: translate(calc(-50% - 28px), -50%) scale(0.75);
+    opacity: 0;
+  }
+  20% {
+    transform: translate(calc(-50% - 14px), -50%) scale(1);
+    opacity: 1;
+  }
+  80% {
+    transform: translate(calc(-50% + 14px), -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(calc(-50% + 28px), -50%) scale(0.75);
+    opacity: 0;
+  }
+}
+
+@keyframes workflowFlowDown {
+  0% {
+    transform: translate(-50%, calc(-50% - 22px)) scale(0.75);
+    opacity: 0;
+  }
+  20% {
+    transform: translate(-50%, calc(-50% - 11px)) scale(1);
+    opacity: 1;
+  }
+  80% {
+    transform: translate(-50%, calc(-50% + 11px)) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, calc(-50% + 22px)) scale(0.75);
+    opacity: 0;
+  }
+}
+
+.workflow-arrow-left {
+  animation: workflowFlowLeft 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.workflow-arrow-right {
+  animation: workflowFlowRight 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.workflow-arrow-down {
+  animation: workflowFlowDown 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.workflow-step-1 { animation-delay: 0s; }
+.workflow-step-2 { animation-delay: 0.3s; }
+.workflow-step-3 { animation-delay: 0.6s; }
+.workflow-step-4 { animation-delay: 0.9s; }
+.workflow-step-5 { animation-delay: 1.2s; }
+
+/* Accessible fallback for reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .workflow-arrow-left,
+  .workflow-arrow-right,
+  .workflow-arrow-down {
+    animation: none;
+    transform: translate(-50%, -50%) !important;
+    opacity: 0.85;
+  }
+}
